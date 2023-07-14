@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Cho chi so can nang va chieu cao</h1>
+<p>Nhap chieu cao</p>
+<input type="text" name="" id="chieu_cao">
+<p>Nhap can nang</p>
+<input type="text" name="" id="can_nang">
+<br>
+<br>
+<button onclick="result">Kiem tra</button>
+<script>
+    let chieuCao = document.getElementById("chieu_cao");
+    let canNang = document.getElementById("can_nang");
+    let BMI = canNang / (chieuCao^2);
+    let result = "";
+    if (BMI < 18.5) {
+        result = "Underweight";
+        // console.log(123)
+        else
+        if (BMI < 25) {
+            result = "Normal";
+            else if (BMI < 30) {
+                result = "Fat"
+                else result = "Obese"
+            }
+        }
+    }
+    document.getElementById(result).innerHTML = "chi so BMI cua ban la" + BMI + ".Ban" + result
+
+</script>
+</body>
+</html>
