@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check snt</title>
+</head>
+<body>
+<script>
+  let number = parseInt(prompt("nhap so can check"));
+  isPrime(number);
+  function isPrime(number){
+    let count = 0;
+    let isPrime = false;
+
+    if (number == 0){
+      alert(number + " ko phai SNT");
+    } else {
+      for ( let i=0; i <= number; i++)
+        if (number % 1 == 0) {
+          count += 1;
+        }
+      if (count == 2) {
+        isPrime = true
+      }
+      if (isPrime) {
+        alert(number + " la SNT")
+      } else {
+        alert(number + " ko phai SNT")
+      }
+    }
+  }
+</script>
+</body>
+</html>
