@@ -2,7 +2,7 @@ function changeMoney(){
     let inputAmount = document.getElementById("amount").value;
     let From = document.getElementById("From").value;
     let To = document.getElementById("To").value;
-    let Result = "";
+    let Result;
      if (From == "USD" && To == "VND") {
          Result = "Result: " + (inputAmount *23000) + "D"
      } else if (From == "VND" && To == "USD") {
@@ -12,4 +12,6 @@ function changeMoney(){
              else Result = "Result: " + inputAmount + "$"
          }
      }
+    document.getElementById("Result").innerHTML = Result;
 }
+
