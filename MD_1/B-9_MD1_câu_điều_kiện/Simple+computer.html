@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num1" placeholder="Nhap so thu 1"/>
+<input type="number" id="num2" placeholder="Nhap so thu 2"/>
+<button onclick="Add()">Cong</button>
+<button onclick="Sub()">Tru</button>
+<h3>Result</h3>
+<p id="result"></p>
+
+<script>
+  function Add() {
+    let a = document.getElementById("num1").value;
+    let b = document.getElementById("num2").value;
+    let result = a + b;
+    document.getElementById("result").innerHTML = result;
+  }
+  function Sub() {
+    let a = document.getElementById("num1").value;
+    let b = document.getElementById("num2").value;
+    let result = a - b;
+    document.getElementById("result").innerHTML = result;
+  }
+</script>
+</body>
+</html>
