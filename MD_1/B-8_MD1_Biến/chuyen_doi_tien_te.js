@@ -15,5 +15,3 @@ function changeMoney(){
     document.getElementById("Result").innerHTML = Result;
      }
 
-
-
