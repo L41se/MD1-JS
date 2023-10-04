@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1200px" height="600px" style="border:3px solid darkblue"></canvas>
+<script>
+  // function Circle(x, y, radius){
+  //   this.x = x;
+  //   this.y = y;
+  //   this.radius = radius;
+  // }
+  // function createCircle(){
+  //   var ctx = document.getElementById("myCanvas").getContext("2d");
+  //   var radius = Math.floor(Math.random() * 80);
+  //   var circle= new Circle(500, 500, 80);
+  //   ctx.beginPath();
+  //   ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+  //   ctx.fill();
+  // }
+  // createCircle();
+
+
+  class Circle{
+      x;
+      y;
+      radius;
+      constructor(x,y,radius) {
+          this.x = x;
+          this.y = y;
+          this.radius = radius
+      }
+      getX(){
+          return this.x;
+      }
+
+      getY(){
+          return this.y;
+      }
+      getRadius(){
+          return this.radius;
+      }
+  }
+  function getRandomHex(){
+      return Math.floor(Math.random()*255);
+  }
+  function getRandomColor() {
+      var red = getRandomHex();
+      var green = getRandomHex();
+      var blue = getRandomHex();
+      return "rgb(" + red + "," + blue + "," + green + ")";
+   }
+  function createCircle(){
+      let ctx = document.getElementById("myCanvas").getContext("2d");
+      let radius = Math.floor(Math.random() * 69)
+      let X = Math.random() * window.innerWidth;
+      let Y = Math.random() * window.innerHeight;
+      let circle = new Circle(X,Y,radius);
+      let color = getRandomColor()
+      ctx.beginPath();
+      ctx.arc(circle.x, circle.y, circle.radius,0,2 * Math.PI);
+      ctx.fill();
+      ctx.fillStyle = color
+  }
+  function createMultipleCircle(){
+      for(var i = 0; i < 30; i++){
+          createCircle();
+      }
+  }
+  createMultipleCircle()
+</script>
+</body>
+</html>

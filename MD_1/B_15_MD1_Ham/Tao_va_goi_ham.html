@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>confirm</title>
+</head>
+<body>
+<script>
+  function processConfirm(answer) {
+    let result = "";
+    if (answer) {
+      result = "Well done, ken we play a game of german dungeon porn";
+    } else{
+      result = "No u ken't escape";
+    }
+    return result;
+  }
+
+  let confirmAnswer = confirm("Play?");
+  let theAnswer = processConfirm(confirmAnswer);
+  alert(theAnswer);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class HinhChuNhat{
+    ChieuDai;
+    ChieuRong;
+    Color;
+    constructor(ChieuDai,ChieuRong,Color) {
+      this.ChieuDai = ChieuDai;
+      this.ChieuRong = ChieuRong;
+      this.Color = Color;
+    }
+    getChieuDai(){
+      return this.ChieuDai;
+    }
+    getChieuRong(){
+      return this.ChieuRong;
+    }
+    getColor(){
+      return this.Color;
+    }
+    getChuVi(){
+      return (this.ChieuDai + this.ChieuRong) * 2;
+    }
+    getDienTich(){
+      return this.ChieuDai * this.ChieuRong;
+    }
+  }
+  let HinhChuNhat1 = new HinhChuNhat(23,16,"green");
+  // console.log(HinhChuNhat1)
+  let ChieuDai = HinhChuNhat1.getChieuDai();
+  let ChieuRong = HinhChuNhat1.getChieuRong();
+  let ChuVi = HinhChuNhat1.getChuVi();
+  let DienTich = HinhChuNhat1.getDienTich();
+  let Color = HinhChuNhat1.getColor();
+  alert("Chieu dai la: " + ChieuDai + "Chieu rong la: " + ChieuRong + "Chu vi: " + ChuVi + "Dien Tich: " + DienTich + "Mau: " + Color);
+</script>
+</body>
+</html>

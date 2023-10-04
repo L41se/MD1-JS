@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Date{
+        day;
+        month;
+        year;
+        constructor(day,month,year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        getDay() {
+            return this.day;
+        }
+        getMonth() {
+            return this.month;
+        }
+        getYear() {
+            return this.year;
+        }
+    }
+    let date1 = new Date(27,10,2002);
+    let getDay = date1.day;
+    let getMonth = date1.month;
+    let getYear = date1.year;
+    alert(getDay + "/" + getMonth + "/" + getYear)
+</script>
+</body>
+</html>
